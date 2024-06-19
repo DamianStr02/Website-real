@@ -9,13 +9,6 @@ body {
     min-height: 100vh;
 }
 
-main {
-    width: 50%;
-    margin: 0 auto;
-    flex: 1;
-    padding: 2rem 0;
-}
-
 header {
     position: sticky;
     top: 0;
@@ -34,7 +27,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Dodano aby menu mogło zawijać się w wiersze */
+    flex-wrap: wrap; /* Menu może zawijać się w wiersze */
 }
 
 nav ul li {
@@ -54,8 +47,16 @@ nav ul li a:hover {
 .container {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto; /* Wyśrodkowanie kontenera */
+    margin: 0 auto;
     padding: 2rem;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 2rem 0;
 }
 
 section {
@@ -80,7 +81,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    width: 100%; /* Zapewnia pełną szerokość stopki */
+    width: 100%;
 }
 
 form {
@@ -113,13 +114,7 @@ form button:hover {
     background-color: #555;
 }
 
-.text {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.image {
+.text, .image {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -139,27 +134,26 @@ form button:hover {
 .frame {
     border: 2px solid #000;
     padding: 10px;
-    display: inline-block;
-    width: 100%;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .image-section {
-    padding-bottom: 2rem; /* Dodaje odstęp poniżej obrazków */
+    padding-bottom: 2rem;
 }
 
 .image-container {
     position: relative;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto; /* Wyśrodkowanie zdjęć */
-    height: 300px; /* Stała wysokość kontenera, aby obrazki nie wpływały na footer */
+    margin: 0 auto;
+    height: 300px;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    display: none; /* Ukryj wszystkie zdjęcia */
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -187,12 +181,12 @@ form button:hover {
     height: 150px;
 }
 
-/*do slidera do recenzji*/
+/* Slider */
 .slider {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto; /* Centrowanie slidera */
+    margin: 0 auto;
     overflow: hidden;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -205,13 +199,13 @@ form button:hover {
 }
 
 .slide {
-    flex: 0 0 100%; /* Szerokość pojedynczego slajdu */
+    flex: 0 0 100%;
     box-sizing: border-box;
 }
 
 .slide img {
-    width: 100%; /* Pełna szerokość zdjęcia */
-    height: auto; /* Automatyczna wysokość zdjęcia */
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: 10px;
 }
@@ -243,13 +237,13 @@ form button:hover {
 
 /* Media Queries dla responsywności */
 @media (max-width: 1200px) {
-    main {
+    .container, main {
         width: 70%;
     }
 }
 
 @media (max-width: 992px) {
-    main {
+    .container, main {
         width: 80%;
     }
 
@@ -264,12 +258,13 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-    main {
+    .container, main {
         width: 90%;
     }
 
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
@@ -287,7 +282,7 @@ form button:hover {
 }
 
 @media (max-width: 576px) {
-    main {
+    .container, main {
         width: 100%;
         padding: 1rem;
     }
@@ -310,8 +305,8 @@ form button:hover {
     }
 
     .frame {
-        width: 100%;
         padding: 5px;
     }
 }
+
 
