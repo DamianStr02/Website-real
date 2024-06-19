@@ -25,7 +25,7 @@ body {
 	margin: 0 auto;
 }
  .text{
-	 width: 50%;
+	 width:50%;
  }
 }
 
@@ -131,12 +131,13 @@ form button:hover {
 
 .image {
     width: 50%;
-    float: right;
+    float: center;
     box-sizing: border-box;
 }
 
 .image img {
     max-width: 50%;
+	align-items: center;
     height: auto;
     display: block;
 }
@@ -181,7 +182,9 @@ form button:hover {
     font-size: 1rem;
     margin-bottom: -10px;
 }
-
+.image1{
+	text-align:center;
+}
 .image2 {
     text-align: center;
 }
@@ -248,5 +251,7 @@ form button:hover {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+
 
 
