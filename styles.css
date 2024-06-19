@@ -1,0 +1,241 @@
+main {
+	width: 50%;
+	margin: 0 auto;
+}
+
+body {
+	display:flex;
+	flex-direction: column;
+	min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    text-align: left; 
+	background-image: url('tlostrony.jpg');
+}
+
+header {
+	position: sticky;
+	top: 0;
+    background-image: url('landscape.jpg');
+    background-repeat: repeat-x;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+	z-index:1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #800080; 
+    text-decoration: underline; 
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+    padding: 2rem;
+}
+
+main {
+	flex: 1;
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section div p {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+	background-image: url('landscape.jpg');
+    background-repeat: repeat-x;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%; /* Zapewnia pełną szerokość stopki */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.text {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+}
+
+.image img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+.tytul {
+    text-align: center;
+	font-size: 26px;
+}
+
+.frame {
+    border: 2px solid #000;
+    padding: 10px;
+    display: inline-block;
+}
+
+.image-section {
+    padding-bottom: 2rem; /* Dodaje odstęp poniżej obrazków */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; /* Wyśrodkowanie zdjęć */
+    height: 300px; /* Stała wysokość kontenera, aby obrazki nie wpływały na footer */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: none; /* Ukryj wszystkie zdjęcia */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-container img.active {
+    display: block;
+}
+
+#clock {
+            font-size: 1rem;
+            margin-bottom: -10px;
+        }
+
+.image2{
+	text-align: center;
+}
+
+		.inline-block {
+            display: inline-block;
+            vertical-align: middle; 
+        }
+        .inline-block img {
+            height: 150px; 
+        }
+		
+/*do slidera do recenzji*/
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; /* Centrowanie slidera */
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%; /* Szerokość pojedynczego slajdu */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%; /* Pełna szerokość zdjęcia */
+    height: 100%; /* Automatyczna wysokość zdjęcia */
+    display: block;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
