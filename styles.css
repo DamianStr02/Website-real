@@ -24,7 +24,9 @@ body {
 	width: 50%;
 	margin: 0 auto;
 }
-}
+ .text{
+	 width:50%;
+ }
 
 /* Style dla nagłówka */
 header {
@@ -120,7 +122,7 @@ form button:hover {
 }
 
 .text {
-    width: 50%;
+    width: 100%;
     float: left;
     padding: 20px;
     box-sizing: border-box;
@@ -245,4 +247,5 @@ form button:hover {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
