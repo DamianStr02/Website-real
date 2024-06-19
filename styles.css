@@ -1,34 +1,37 @@
-main {
-	width: 50%;
-	margin: 0 auto;
+/* Ogólne stylowanie */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url('tlostrony.jpg');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-body {
-	display:flex;
-	flex-direction: column;
-	min-height: 100vh;
-    font-family: Arial, sans-serif;
+main {
+    width: 50%;
     margin: 0 auto;
-    background-color: #f4f4f4;
-    text-align: left; 
-	background-image: url('tlostrony.jpg');
+    flex: 1;
+    padding: 2rem 0;
 }
 
 header {
-	position: sticky;
-	top: 0;
+    position: sticky;
+    top: 0;
     background-image: url('landscape.jpg');
     background-repeat: repeat-x;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     width: 100%;
-	z-index:1;
+    z-index: 1;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -42,8 +45,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #800080; 
-    text-decoration: underline; 
+    color: #800080;
+    text-decoration: underline;
 }
 
 .container {
@@ -51,11 +54,6 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto; /* Wyśrodkowanie kontenera */
     padding: 2rem;
-}
-
-main {
-	flex: 1;
-    padding: 2rem 0;
 }
 
 section {
@@ -75,7 +73,7 @@ h2 {
 }
 
 footer {
-	background-image: url('landscape.jpg');
+    background-image: url('landscape.jpg');
     background-repeat: repeat-x;
     color: #fff;
     text-align: center;
@@ -127,14 +125,14 @@ form button:hover {
 }
 
 .image img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
 
 .tytul {
     text-align: center;
-	font-size: 26px;
+    font-size: 26px;
 }
 
 .frame {
@@ -150,7 +148,7 @@ form button:hover {
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     margin: 0 auto; /* Wyśrodkowanie zdjęć */
     height: 300px; /* Stała wysokość kontenera, aby obrazki nie wpływały na footer */
 }
@@ -169,24 +167,24 @@ form button:hover {
 }
 
 #clock {
-            font-size: 1rem;
-            margin-bottom: -10px;
-        }
-
-.image2{
-	text-align: center;
+    font-size: 1rem;
+    margin-bottom: -10px;
 }
 
-		.inline-block {
-            display: inline-block;
-            vertical-align: middle; 
-        }
-        .inline-block img {
-            height: 150px; 
-        }
-		
-/*do slidera do recenzji*/
+.image2 {
+    text-align: center;
+}
 
+.inline-block {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+.inline-block img {
+    height: 150px; 
+}
+
+/*do slidera do recenzji*/
 .slider {
     position: relative;
     width: 80%;
@@ -210,7 +208,7 @@ form button:hover {
 
 .slide img {
     width: 100%; /* Pełna szerokość zdjęcia */
-    height: 100%; /* Automatyczna wysokość zdjęcia */
+    height: auto; /* Automatyczna wysokość zdjęcia */
     display: block;
     border-radius: 10px;
 }
@@ -239,3 +237,66 @@ form button:hover {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Media Queries dla responsywności */
+@media (max-width: 1200px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        width: 80%;
+    }
+
+    .text, .image {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .inline-block {
+        display: block;
+        text-align: center;
+    }
+
+    .raised-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .slider {
+        width: 100%;
+    }
+}
+
