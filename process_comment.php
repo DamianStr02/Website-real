@@ -9,6 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = htmlspecialchars($_POST['comment']);
     
     $entry = "Imię: $name\nKomentarz: $comment\n\n";
+
+    if (!file_exists('comments')) {
+        mkdir('comments', 0777, true);
+    }
     
     file_put_contents("comments/$review.txt", $entry, FILE_APPEND);
     
